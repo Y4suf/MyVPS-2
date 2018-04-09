@@ -52,7 +52,7 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.d/rc.loca
 yum -y install wget curl
 
 # setting repo
-wget https://raw.githubusercontent.com/Y4suf/sshinjector2/master/epel-release-6-8.noarch.rpm
+wget https://raw.githubusercontent.com/Y4suf/MyVPS-2/master/epel-release-6-8.noarch.rpm
 wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 rpm -Uvh epel-release-6-8.noarch.rpm
 rpm -Uvh remi-release-6.rpm
