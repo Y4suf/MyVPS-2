@@ -485,5 +485,5 @@ echo "VPS REBOOT TIAP JAM 24.00 !"  | tee -a log-install.txt
 echo""  | tee -a log-install.txt
 echo "Please Reboot your VPS !"  | tee -a log-install.txt
 echo "================================================"  | tee -a log-install.txt
-echo "Script Created By Ibnu Fachrizal"  | tee -a log-install.txt
+echo "Script Created By Orang Ganteng"  | tee -a log-install.txt
 echo "Terimakasih telah berlangganan di www.sshinjector.net"  | tee -a log-install.txt
