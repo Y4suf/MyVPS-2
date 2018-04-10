@@ -1,9 +1,23 @@
 #!/bin/bash
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 
-# initialisasi var
-OS=`uname -p`;
-
-
+ red='\e[1;31m'
+               green='\e[0;32m'
+               NC='\e[0m'
+			   
+               echo "Connecting to Orang-Ganteng.com..."
+               sleep 0.5
+               
+			   echo "Checking Permision..."
+               sleep 0.5
+               
+			   echo -e "${green}Permission Accepted...${NC}"
+               sleep 1
+			   
+              
+flag=0
+	
 #iplist="ip.txt"
 
 wget --quiet -O iplist.txt https://raw.githubusercontent.com/Y4suf/ssl/master/ip.txt
@@ -18,19 +32,30 @@ lines=`cat $iplist`
 
 for line in $lines; do
 #        echo "$line"
-        if [ "$line" = "$myip" ]
+        if [ "$line" = "$myip" ];
         then
                 flag=1
         fi
 
 done
 
-if [ $flag 0 ]
+if [ $flag -eq 0 ]
 then
-   echo  "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!
-Hubungi: Orang Ganteng (0895703796928)"
+   echo  "Maaf, hanya IP @ Password yang terdaftar sahaja boleh menggunakan script ini!
+Hubungi:  : Orang Ganteng | Wa 0895703796928"
+
+rm -f /root/iplist.txt
+
+rm -f /root/cents6-kvm.sh
+
+rm -f /root/.bash_history && history -c
+
    exit 1
-fi
+   
+# initialisasi var
+OS=`uname -p`;
+
+
 
 # go to root
 cd
