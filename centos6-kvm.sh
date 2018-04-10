@@ -46,7 +46,7 @@ Hubungi:  : Orang Ganteng | Wa 0895703796928"
 
 rm -f /root/iplist.txt
 
-rm -f /root/cents6-kvm.sh
+rm -f /root/centos6-kvm.sh
 
 rm -f /root/.bash_history && history -c
 
